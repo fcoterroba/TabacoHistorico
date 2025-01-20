@@ -1,0 +1,194 @@
+{
+    "productos": [
+      {
+        "nombre": "Marlboro",
+        "tipo": "cigarrillos",
+        "descripcion": "Una de las marcas más reconocidas de cigarrillos.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 5.20,
+          "2024": 5.10,
+          "2023": 5.00,
+          "2022": 4.90,
+          "2021": 4.80,
+          "2020": 4.70,
+          "2019": 4.60,
+          "2018": 4.50,
+          "2017": 4.40,
+          "2016": 4.30,
+          "2015": 4.20
+        }
+      },
+      {
+        "nombre": "Camel",
+        "tipo": "cigarrillos",
+        "descripcion": "Un clásico en el mundo del tabaco.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 4.90,
+          "2024": 4.80,
+          "2023": 4.70,
+          "2022": 4.60,
+          "2021": 4.50,
+          "2020": 4.40,
+          "2019": 4.30,
+          "2018": 4.20,
+          "2017": 4.10,
+          "2016": 4.00,
+          "2015": 3.90
+        }
+      },
+      {
+        "nombre": "Lucky Strike",
+        "tipo": "cigarrillos",
+        "descripcion": "Famoso por su sabor intenso.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 5.00,
+          "2024": 4.90,
+          "2023": 4.80,
+          "2022": 4.70,
+          "2021": 4.60,
+          "2020": 4.50,
+          "2019": 4.40,
+          "2018": 4.30,
+          "2017": 4.20,
+          "2016": 4.10,
+          "2015": 4.00
+        }
+      },
+      {
+        "nombre": "Pall Mall",
+        "tipo": "cigarrillos",
+        "descripcion": "Ideal para los amantes de sabores suaves.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 4.70,
+          "2024": 4.60,
+          "2023": 4.50,
+          "2022": 4.40,
+          "2021": 4.30,
+          "2020": 4.20,
+          "2019": 4.10,
+          "2018": 4.00,
+          "2017": 3.90,
+          "2016": 3.80,
+          "2015": 3.70
+        }
+      },
+      {
+        "nombre": "Chesterfield",
+        "tipo": "cigarrillos",
+        "descripcion": "Equilibrio perfecto entre sabor y precio.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 4.80,
+          "2024": 4.70,
+          "2023": 4.60,
+          "2022": 4.50,
+          "2021": 4.40,
+          "2020": 4.30,
+          "2019": 4.20,
+          "2018": 4.10,
+          "2017": 4.00,
+          "2016": 3.90,
+          "2015": 3.80
+        }
+      },
+      {
+        "nombre": "Golden Virginia",
+        "tipo": "tabaco-liar",
+        "descripcion": "Tabaco de liar de alta calidad.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 8.90,
+          "2024": 8.70,
+          "2023": 8.50,
+          "2022": 8.30,
+          "2021": 8.10,
+          "2020": 7.90,
+          "2019": 7.70,
+          "2018": 7.50,
+          "2017": 7.30,
+          "2016": 7.10,
+          "2015": 6.90
+        }
+      },
+      {
+        "nombre": "Drum",
+        "tipo": "tabaco-liar",
+        "descripcion": "El favorito de los usuarios de tabaco de liar.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 9.10,
+          "2024": 8.90,
+          "2023": 8.70,
+          "2022": 8.50,
+          "2021": 8.30,
+          "2020": 8.10,
+          "2019": 7.90,
+          "2018": 7.70,
+          "2017": 7.50,
+          "2016": 7.30,
+          "2015": 7.10
+        }
+      },
+      {
+        "nombre": "Cohiba",
+        "tipo": "puros",
+        "descripcion": "Puros de lujo originarios de Cuba.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 15.00,
+          "2024": 14.50,
+          "2023": 14.00,
+          "2022": 13.50,
+          "2021": 13.00,
+          "2020": 12.50,
+          "2019": 12.00,
+          "2018": 11.50,
+          "2017": 11.00,
+          "2016": 10.50,
+          "2015": 10.00
+        }
+      },
+      {
+        "nombre": "Montecristo",
+        "tipo": "puros",
+        "descripcion": "Uno de los puros más famosos del mundo.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 13.50,
+          "2024": 13.00,
+          "2023": 12.50,
+          "2022": 12.00,
+          "2021": 11.50,
+          "2020": 11.00,
+          "2019": 10.50,
+          "2018": 10.00,
+          "2017": 9.50,
+          "2016": 9.00,
+          "2015": 8.50
+        }
+      },
+      {
+        "nombre": "Fortuna",
+        "tipo": "cigarrillos",
+        "descripcion": "Tabaco español con gran tradición.",
+        "imagen": "https://placehold.co/600x400/png",
+        "precios": {
+          "2025": 4.50,
+          "2024": 4.40,
+          "2023": 4.30,
+          "2022": 4.20,
+          "2021": 4.10,
+          "2020": 4.00,
+          "2019": 3.90,
+          "2018": 3.80,
+          "2017": 3.70,
+          "2016": 3.60,
+          "2015": 3.50
+        }
+      }
+    ]
+  }  

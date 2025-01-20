@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios Históricos - TabacoHistorico.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-6 px-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold">TabacoHistorico.com</h1>
+      <select class="p-2 rounded-lg bg-white text-gray-800">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-12 px-4">
+    <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center">Consulta los precios históricos del tabaco</h2>
+    <p class="text-lg text-gray-600 mb-8 text-center">Busca marcas de tabaco por nombre para ver la evolución de sus precios.</p>
+
+    <!-- Search Section -->
+    <section class="bg-white p-6 rounded-lg shadow-lg mb-8">
+      <div class="flex flex-col sm:flex-row gap-4">
+        <input 
+          id="search-input"
+          type="text" 
+          placeholder="Buscar por nombre de marca..." 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button 
+          onclick="filterResults()"
+          class="w-full sm:w-1/3 bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition duration-300">
+          Buscar
+        </button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section>
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Resultados</h3>
+      <div id="results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Resultados dinámicos se generarán aquí -->
+      </div>
+    </section>
+
+    <!-- Paginación -->
+    <section class="py-4 text-center">
+      <div id="paginationControls" class="inline-flex space-x-4">
+        <button id="prevPageBtn" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg" disabled>
+          Anterior
+        </button>
+        <span id="pageNumber" class="font-semibold text-lg">Página 1</span>
+        <button id="nextPageBtn" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">
+          Siguiente
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center fadeIn">
+    <p>&copy; 2025 TabacoHistorico.com. Todos los derechos reservados.</p>
+    <p class="text-sm">Hecho con amor y datos por <a href="https://www.fcoterroba.com" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank">@fcoterroba</a></p>
+    <p class="text-sm">Desde Málaga hasta Alicante.</p>
+  </footer>
+  
+  <!-- Scroll Up Button -->
+  <div id="scrollUpBtn" class="scroll-up">
+    <span class="text-white text-2xl">&uarr;</span>
+  </div>
+
+  <script src="../js/PrecioHistorico.js"></script>
+  <script src="../js/general.js"></script>
+</body>
+</html>
+  

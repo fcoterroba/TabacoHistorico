@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabacoHistorico.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Selector de Idioma -->
+  <div class="absolute top-4 right-4">
+    <select class="p-2 rounded-lg">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-20 px-6 flex flex-col justify-center items-center text-center fadeIn">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4">TabacoHistorico</h1>
+    <p class="text-lg sm:text-xl mb-6">Explora la evolución de los precios del tabaco en España con gráficos interactivos y datos detallados.</p>
+  </section>
+
+  <!-- Price Overview Section -->
+  <section id="price-history" class="py-16 px-6 bg-white">
+    <div class="container mx-auto text-center fadeIn">
+      <h2 class="text-3xl sm:text-4xl font-semibold mb-4 text-gray-800">¿Cuánto ha subido el tabaco? 📊</h2>
+      <p class="text-lg mb-8 text-gray-600">Descubre cómo han cambiado los precios del tabaco a lo largo de los años. Nuestros gráficos te ayudarán a entender las tendencias.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-1 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Evolución de precios</h3>
+          <canvas id="currentPriceChart" class="w-3/4 h-48 mx-auto"></canvas>
+          <a href="PrecioHistorico.html" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg text-lg transition duration-300">Ver precios históricos</a>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Datos de Precios Históricos -->
+  <section id="historical-search" class="py-16 px-6 bg-gray-100">
+    <div class="container mx-auto text-center fadeIn">
+      <h2 class="text-3xl sm:text-4xl font-semibold mb-4 text-gray-800">Precios actuales del tabaco</h2>
+      <p class="text-lg mb-8 text-gray-600">Busca tu marca favorita, la más barata o con casi cualquier filtro.</p>
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+        <div class="bg-gray-200 p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">
+          <h3 class="text-xl font-semibold mb-4">Gráfico de Evolución de Precios</h3>
+          <canvas id="evolutionChart" class="w-3/4 h-48 mx-auto"></canvas>
+          <a href="#historical-search" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg text-lg transition duration-300">Ver precios actuales y filtros</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Información -->
+  <section class="py-16 px-6 bg-white text-center">
+    <h2 class="text-3xl font-semibold mb-4 text-gray-800">API Comercializada</h2>
+    <p class="text-lg mb-8 text-gray-600">Contamos con una API que proporciona: información actualizada sobre los precios del tabaco.</p>
+    <ul class="list-disc">
+      <li>Información actualizada sobre los precios actuales del tabaco.</li>
+      <li>Información detallada de los precios históricos del tabaco.</li>
+    </ul>
+    <p class="text-lg mb-8 text-gray-600">Si estás interesado en obtener acceso, contáctanos a través de correo electrónico.</p>
+    <a href="mailto:fcoterroba@gmail.com" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-lg text-lg transition duration-300" style="background-color: orange;">Contactar con Nosotros</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center fadeIn">
+    <p>&copy; 2025 TabacoHistorico.com. Todos los derechos reservados.</p>
+    <p class="text-sm">Hecho con amor y datos por <a href="https://www.fcoterroba.com" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank">@fcoterroba</a></p>
+    <p class="text-sm">Desde Málaga hasta Alicante.</p>
+  </footer>
+
+  <!-- Scroll Up Button -->
+  <div id="scrollUpBtn" class="scroll-up">
+    <span class="text-white text-2xl">&uarr;</span>
+  </div>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/general.js"></script>
+</body>
+</html>
