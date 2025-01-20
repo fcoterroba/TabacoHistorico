@@ -1,25 +1,25 @@
-let currentPage = 1;  // Página inicial
-const resultsPerPage = 6;  // Resultados por página
-let totalPages = 1;  // Total de páginas (se actualizará al cargar los datos)
+let currentPage = 1;
+const resultsPerPage = 6;
+let totalPages = 1;
+let allResults = [];
 
-// Función para cargar los resultados desde el JSON
 async function loadResults() {
-  const response = await fetch('../data/data.json'); // Ruta al archivo data.json
+  const response = await fetch('../data/data.json');
   const data = await response.json();
   
-  const resultsContainer = document.getElementById('results');
-  const paginationControls = document.getElementById('paginationControls');
-  
-  // Limpiar los resultados previos y configurar paginación
-  resultsContainer.innerHTML = '';
-  totalPages = Math.ceil(data.productos.length / resultsPerPage);
+  allResults = data.productos;
 
-  // Calcular los resultados a mostrar según la página actual
+  filterResults();
+
+  totalPages = Math.ceil(filteredResults.length / resultsPerPage);
+
   const startIndex = (currentPage - 1) * resultsPerPage;
   const endIndex = startIndex + resultsPerPage;
-  const currentResults = data.productos.slice(startIndex, endIndex);
+  const currentResults = filteredResults.slice(startIndex, endIndex);
   
-  // Recorrer los productos y mostrarlos
+  const resultsContainer = document.getElementById('results');
+  resultsContainer.innerHTML = ''; 
+
   currentResults.forEach(producto => {
     const primerPrecio = producto.precios['2015'];
     const ultimoPrecio = producto.precios['2025'];
@@ -39,25 +39,34 @@ async function loadResults() {
     `;
     resultsContainer.innerHTML += resultCard;
   });
-  
-  // Actualizar los controles de paginación
+
   updatePaginationControls();
 }
 
-// Función para actualizar los controles de paginación
+let filteredResults = []; 
+
+function filterResults() {
+  const searchInput = document.getElementById('search-input').value.toLowerCase();
+  filteredResults = allResults.filter(producto => 
+    producto.nombre.toLowerCase().includes(searchInput)
+  );
+  loadResults();
+}
+
 function updatePaginationControls() {
   const prevBtn = document.getElementById('prevPageBtn');
   const nextBtn = document.getElementById('nextPageBtn');
   const pageNumber = document.getElementById('pageNumber');
-  
+
   pageNumber.textContent = `Página ${currentPage}`;
   
-  // Deshabilitar los botones según la página actual
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages;
+  
+  prevBtn.classList.toggle('opacity-50', currentPage === 1);
+  nextBtn.classList.toggle('opacity-50', currentPage === totalPages);
 }
 
-// Función para navegar a la página anterior
 function goToPreviousPage() {
   if (currentPage > 1) {
     currentPage--;
@@ -65,7 +74,6 @@ function goToPreviousPage() {
   }
 }
 
-// Función para navegar a la siguiente página
 function goToNextPage() {
   if (currentPage < totalPages) {
     currentPage++;
@@ -73,20 +81,7 @@ function goToNextPage() {
   }
 }
 
-// Función para filtrar los resultados según el input
-function filterResults() {
-  const searchInput = document.getElementById('search-input').value.toLowerCase();
-  const cards = document.querySelectorAll('#results > div');
-
-  cards.forEach(card => {
-    const title = card.querySelector('h4').textContent.toLowerCase();
-    card.style.display = title.includes(searchInput) ? '' : 'none';
-  });
-}
-
-// Cargar los datos al cargar la página
 window.onload = loadResults;
 
-// Asignar eventos a los botones de paginación
 document.getElementById('prevPageBtn').addEventListener('click', goToPreviousPage);
 document.getElementById('nextPageBtn').addEventListener('click', goToNextPage);

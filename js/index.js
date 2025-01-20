@@ -1,4 +1,3 @@
-// Gráfico de Precios del Tabaco (Evolución)
 const ctxEvolution = document.getElementById('evolutionChart').getContext('2d');
 const evolutionChart = new Chart(ctxEvolution, {
   type: 'bar',
@@ -25,7 +24,6 @@ const evolutionChart = new Chart(ctxEvolution, {
   }
 });
 
-// Gráfico de Precios Actuales
 const ctxCurrentPrice = document.getElementById('currentPriceChart').getContext('2d');
 const currentPriceChart = new Chart(ctxCurrentPrice, {
   type: 'line',

@@ -1,4 +1,3 @@
-// Scroll Up Button
 window.addEventListener('scroll', function() {
     let scrollUpBtn = document.getElementById('scrollUpBtn');
     if (window.scrollY > 300) {
